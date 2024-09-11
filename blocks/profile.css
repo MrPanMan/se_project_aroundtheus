@@ -26,11 +26,11 @@
 }
 
 .profile__title {
-  font-size: 42px;
   line-height: 48px;
   font-weight: 500px;
   grid-area: title;
   margin: 0;
+  font-family: "Inter";
 }
 
 .profile__description {
@@ -42,6 +42,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: "Inter";
 }
 
 .profile__image {
@@ -89,11 +90,11 @@
   }
 
   .profile__title {
-    width: 196px;
     height: 22px;
     font-size: 22px;
     line-height: 26px;
     text-align: center;
+    margin-bottom: 14px;
   }
 
   .profile__info {
