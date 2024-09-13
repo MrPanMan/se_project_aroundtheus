@@ -3,6 +3,7 @@
   border-radius: 10px;
   flex-direction: column;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .card__image {
