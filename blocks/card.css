@@ -2,7 +2,6 @@
   display: flex;
   border-radius: 10px;
   flex-direction: column;
-  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -22,19 +21,24 @@
   border-bottom-left-radius: 10px;
 }
 
-.card__description_title {
+.card__description-title {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 900;
+  font-family: "Inter", Arial, sans-serif;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 353px;
 }
 
-.card__like_button {
+.card__like-button {
   background: transparent url(../images/like-button.svg) center no-repeat;
-  width: 21px;
-  height: 18px;
+  width: 25px;
+  height: 20px;
   border-style: none;
 }
 
-.card__like_button:hover {
+.card__like-button:hover {
   opacity: 0.5;
 }

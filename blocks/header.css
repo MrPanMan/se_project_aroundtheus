@@ -1,18 +1,25 @@
 .header {
   margin-top: 45px;
   border-bottom: 1px solid;
-  border-color: #545454;
-  margin-top: 45px;
+  border-color: rgba(84, 84, 84);
 }
 
 .header__logo {
   margin-top: 28px;
-  margin-left: 27px;
   margin-bottom: 32px;
 }
 
 @media screen and (max-width: 480px) {
   .header {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__logo {
+    height: 24px;
+    width: 126px;
+    margin-top: 28px;
+    margin-left: 27px;
   }
 }
