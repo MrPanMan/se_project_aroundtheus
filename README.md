@@ -16,4 +16,6 @@ This project is made so all the elements are displayed correctly on popular scre
 
 [link to image](../se_project_aroundtheus/images/Screenshot%202024-09-15%20174432.png)
 
-[link to video](../se_project_aroundtheus/VideoExplantion.mp4)
+[link to video](https://youtu.be/TQ04jvED3jQ)
+
+[link to github pages](https://MrPanMan.github.io/se_project_aroundtheus/)
