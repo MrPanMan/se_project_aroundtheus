@@ -35,6 +35,8 @@
 }
 
 .profile__title {
+  max-width: 222px;
+  min-width: 201px;
   font-size: 40px;
   line-height: 48px;
   font-weight: 500;
@@ -145,9 +147,6 @@
 
   .profile__description {
     margin-top: 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   .profile__info {
