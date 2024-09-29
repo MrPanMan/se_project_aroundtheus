@@ -35,7 +35,7 @@
 }
 
 .profile__title {
-  max-width: 196px;
+  max-width: 373px;
   min-width: 201px;
   font-size: 40px;
   line-height: 48px;
@@ -100,7 +100,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 568px) {
   .profile {
     flex-direction: column;
   }
@@ -143,6 +143,7 @@
 @media screen and (max-width: 320px) {
   .profile__title {
     margin-bottom: 14px;
+    max-width: 196px;
   }
 
   .profile__description {
