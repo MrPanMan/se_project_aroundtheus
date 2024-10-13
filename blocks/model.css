@@ -1,0 +1,149 @@
+.model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  padding: 19px;
+}
+
+.model__heading {
+  max-width: 330px;
+  height: 23px;
+  font-family: "inter", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29px;
+  color: black;
+  margin-bottom: 54px;
+  margin-top: 36px;
+}
+
+.model__form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.model__form_button {
+  border-style: none;
+  border-bottom: 1px solid #000;
+  width: 358px;
+  height: 14px;
+  padding-bottom: 13px;
+}
+
+.model__button_save {
+  margin: auto;
+  margin-top: 28px;
+  border-style: none;
+  background-color: #000;
+  color: white;
+  border-radius: 2px;
+  width: 358px;
+  height: 50px;
+  font-family: "inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.model__opened {
+  display: flex;
+}
+
+.model__container {
+  position: relative;
+  background-color: white;
+  margin: auto;
+  padding: 0px 36px 37px 36px;
+  border-radius: 10px;
+}
+
+.model__close {
+  position: absolute;
+  background-image: url(../images/Close\ Icon.svg);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  bottom: calc(100% + 5px);
+  left: calc(100% + 5px);
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.model__button_save:hover {
+  opacity: 0.9;
+}
+
+.model__close:hover {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 475px) {
+  .model__close {
+    left: calc(83% + 5px);
+    margin-bottom: 13px;
+  }
+}
+
+@media screen and (max-width: 387px) {
+  .model__close {
+    left: calc(73% + 5px);
+    margin-bottom: 13px;
+  }
+  .model__form {
+    max-width: 270px;
+  }
+
+  .model__button_save {
+    max-width: 270px;
+  }
+
+  .model__heading {
+    max-width: 270px;
+  }
+
+  .model {
+    padding: 0;
+  }
+
+  .model__form_button {
+    max-width: 270px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .model__form {
+    max-width: 238px;
+  }
+
+  .model__button_save {
+    max-width: 238px;
+  }
+
+  .model__heading {
+    max-width: 238px;
+  }
+
+  .model__close {
+    margin-bottom: 13px;
+    left: calc(83% + 5px);
+    height: 26px;
+    width: 26px;
+  }
+
+  .model {
+    padding: 0;
+  }
+
+  .model__form_button {
+    max-width: 238px;
+  }
+}
