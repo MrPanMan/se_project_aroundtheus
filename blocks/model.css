@@ -74,7 +74,7 @@
   background-size: contain;
 }
 
-.model__edit-opened {
+.modal_opened {
   display: none;
 }
 
