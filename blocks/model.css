@@ -1,4 +1,4 @@
-.model {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +10,7 @@
   padding: 19px;
 }
 
-.model__heading {
+.modal__heading {
   max-width: 330px;
   height: 23px;
   font-family: "inter", Arial, sans-serif;
@@ -22,13 +22,13 @@
   margin-top: 36px;
 }
 
-.model__form {
+.modal__form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.model__form-button {
+.modal__form-button {
   border-style: none;
   border-bottom: 1px solid #000;
   width: 358px;
@@ -36,7 +36,7 @@
   padding-bottom: 13px;
 }
 
-.model__button-save {
+.modal__button-save {
   margin: auto;
   margin-top: 28px;
   border-style: none;
@@ -52,7 +52,7 @@
   cursor: pointer;
 }
 
-.model__container {
+.modal__container {
   position: relative;
   background-color: white;
   margin: auto;
@@ -60,7 +60,7 @@
   border-radius: 10px;
 }
 
-.model__close {
+.modal__close {
   position: absolute;
   background-image: url(../images/Close\ Icon.svg);
   border: none;
@@ -78,72 +78,72 @@
   display: none;
 }
 
-.model__button-save:hover {
+.modal__button-save:hover {
   opacity: 0.9;
 }
 
-.model__close:hover {
+.modal__close:hover {
   opacity: 0.9;
 }
 
 @media screen and (max-width: 475px) {
-  .model__close {
+  .modal__close {
     left: calc(83% + 5px);
     margin-bottom: 13px;
   }
 }
 
 @media screen and (max-width: 387px) {
-  .model__close {
+  .modal__close {
     left: calc(73% + 5px);
     margin-bottom: 13px;
   }
-  .model__form {
+  .modal__form {
     max-width: 270px;
   }
 
-  .model__button-save {
+  .modal__button-save {
     max-width: 270px;
   }
 
-  .model__heading {
+  .modal__heading {
     max-width: 270px;
   }
 
-  .model {
+  .modal {
     padding: 0;
   }
 
-  .model__form-button {
+  .modal__form-button {
     max-width: 270px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .model__form {
+  .modal__form {
     max-width: 238px;
   }
 
-  .model__button-save {
+  .modal__button-save {
     max-width: 238px;
   }
 
-  .model__heading {
+  .modal__heading {
     max-width: 238px;
   }
 
-  .model__close {
+  .modal__close {
     margin-bottom: 13px;
     left: calc(83% + 5px);
     height: 26px;
     width: 26px;
   }
 
-  .model {
+  .modal {
     padding: 0;
   }
 
-  .model__form-button {
+  .modal__form-button {
     max-width: 238px;
   }
 }
