@@ -74,7 +74,7 @@
   background-size: contain;
 }
 
-.modal_opened {
+.modal_closed {
   display: none;
 }
 
@@ -90,6 +90,7 @@
   .modal__close {
     left: calc(83% + 5px);
     margin-bottom: 13px;
+    padding: 24px 21px 24px 21px;
   }
 }
 
@@ -120,6 +121,14 @@
 }
 
 @media screen and (max-width: 320px) {
+  .modal__container {
+    padding: 0 22px 25px 22px;
+  }
+
+  .modal__heading {
+    margin-bottom: 75px;
+  }
+
   .modal__form {
     max-width: 238px;
   }
@@ -133,10 +142,11 @@
   }
 
   .modal__close {
-    margin-bottom: 13px;
-    left: calc(83% + 5px);
-    height: 26px;
+    bottom: calc(90% + 5px);
+    left: calc(89% + 5px);
     width: 26px;
+    height: 26px;
+    background-size: 20px 20px;
   }
 
   .modal {

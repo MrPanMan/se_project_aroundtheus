@@ -21,6 +21,7 @@
   border-style: solid;
   margin-top: 12px;
   margin-left: 18px;
+  cursor: pointer;
 }
 
 .profile__add-button {
@@ -32,6 +33,7 @@
   border-style: solid;
   border-width: 2px;
   border-color: rgba(255, 255, 255, 1);
+  cursor: pointer;
 }
 
 .profile__title {
