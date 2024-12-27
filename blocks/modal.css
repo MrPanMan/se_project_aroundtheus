@@ -6,12 +6,17 @@
   bottom: 0;
   background-color: rgb(0, 0, 0, 0.5);
   z-index: 999;
-  display: none;
+  display: flex;
   padding: 19px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.5s linear;
 }
 
 .modal_opened {
   display: flex;
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal__heading {
@@ -78,8 +83,47 @@
   background-size: contain;
 }
 
+.modal__picture-close-button {
+  position: absolute;
+  background-image: url(../images/Close\ Icon.svg);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  right: 75px;
+
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .modal__close {
-  display: none;
+  visibility: hidden;
+}
+
+.modal__container_picture {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__picture {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: cover;
+}
+
+.modal__picture-caption {
+  top: 600px;
+  left: 125px;
 }
 
 .modal__button-save:hover {
