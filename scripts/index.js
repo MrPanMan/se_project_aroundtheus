@@ -62,15 +62,32 @@ const pictureModalClose = pictureModal.querySelector("#picture-modal-close");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  modal.addEventListener("mousedown", handleClickOutside);
+  document.addEventListener("keydown", handleEscapeKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  modal.removeEventListener("mousedown", handleClickOutside);
+  document.removeEventListener("keydown", handleEscapeKey);
 }
 
 function renderCard(cardData, cardsListEL) {
   const cardElement = getCardElement(cardData);
   cardsListEL.prepend(cardElement);
+}
+
+function handleEscapeKey(e) {
+  if (e.key === "Escape") {
+    const currentModel = document.querySelector(".modal_opened");
+    closeModal(currentModel);
+  }
+}
+
+function handleClickOutside(e) {
+  if (e.target.classList.contains("modal_opened")) {
+    closeModal(e.target);
+  }
 }
 
 function getCardElement(cardData) {

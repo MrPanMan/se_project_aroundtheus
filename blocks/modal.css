@@ -97,6 +97,23 @@
   background-size: contain;
 }
 
+.modal__error {
+  color: red;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  font-size: 12px;
+  visibility: hidden;
+}
+
+.modal__error_visible {
+  visibility: visible;
+}
+
+.modal__label {
+  position: relative;
+}
+
 .modal__close {
   visibility: hidden;
 }
