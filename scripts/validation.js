@@ -65,7 +65,7 @@ const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".popup__button",
-  inactiveButtonClass: "popup__button_disabled",
+  inactiveButtonClass: "modal__button-save_diabled",
   inputErrorClass: "popup__input_type_error",
   errorClass: "modal__error_visible",
 };

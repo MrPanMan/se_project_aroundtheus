@@ -61,6 +61,11 @@
   cursor: pointer;
 }
 
+.modal__button-save_diabled {
+  opacity: 50%;
+  pointer-events: none;
+}
+
 .modal__container {
   position: relative;
   background-color: white;
