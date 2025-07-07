@@ -1,3 +1,5 @@
+import Card from "./Card.js";
+
 const initialCards = [
   {
     name: "Yosemite Valley",
@@ -24,6 +26,18 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
   },
 ];
+
+// const cardData = {
+//   name: "Yosemite Valley",
+//   link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
+// };
+
+initialCards.forEach((cardData) => {
+  const card = new Card(cardData, "#card-template");
+  const cardElement = card.getVeiw();
+  // this is a NEW correct implementation
+  // here we will get a card element, but we still need to render it somehow
+});
 
 console.log(initialCards);
 
