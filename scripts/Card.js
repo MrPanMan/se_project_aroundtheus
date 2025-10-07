@@ -6,7 +6,7 @@ export default class Card {
   }
 
   _setEventListeners() {
-    ".card__like-button";
+    (".card__like-button");
     this._cardElement
       .querySelector(".card__like-button")
       .addEventListener("click", () => {
@@ -38,27 +38,38 @@ export default class Card {
       .cloneNode(true);
 
     const cardImageEL = this._cardElement.querySelector(".card__image");
+
     cardImageEL.alt = this._name;
     cardImageEL.src = this._link;
+
     cardImageEL.addEventListener("click", () => {
       pictureModalImage.src = cardData.link;
       pictureModalImage.alt = cardData.name;
       pictureModalCaption.textContent = cardData.name;
+
       openModal(pictureModal);
     });
+
     const cardTitleEL = this._cardElement.querySelector(
       ".card__description-title"
     );
+
     cardTitleEL.textContent = this._name;
+
     const likeButton = this._cardElement.querySelector(".card__like-button");
+
     likeButton.addEventListener("click", () => {
       likeButton.classList.toggle("card__like-button_active");
     });
+
     const deleteButton = this._cardElement.querySelector(
       ".card__delete-button"
     );
+
     deleteButton.addEventListener("click", () => {
       cardElement.remove();
     });
+
+    return this._cardElement;
   }
 }

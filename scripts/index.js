@@ -98,8 +98,10 @@ function closeModal(modal) {
 }
 
 function renderCard(cardData, cardsListEL) {
-  const cardElement = getCardElement(cardData);
-  cardsListEL.prepend(cardElement);
+  const card = new Card(cardData, "#card-template");
+  const cardView = card.getVeiw();
+
+  cardsListEL.prepend(cardView);
 }
 
 function handleEscapeKey(e) {
@@ -115,34 +117,34 @@ function handleClickOutside(e) {
   }
 }
 
-function getCardElement(cardData) {
-  const cardElement = cardTemplate.cloneNode(true);
-  const cardImageEL = cardElement.querySelector(".card__image");
-  const cardTitleEL = cardElement.querySelector(".card__description-title");
-  const likeButton = cardElement.querySelector(".card__like-button");
-  const deleteButton = cardElement.querySelector(".card__delete-button");
+// function getCardElement(cardData) {
+//   const cardElement = cardTemplate.cloneNode(true);
+//   const cardImageEL = cardElement.querySelector(".card__image");
+//   const cardTitleEL = cardElement.querySelector(".card__description-title");
+//   const likeButton = cardElement.querySelector(".card__like-button");
+//   const deleteButton = cardElement.querySelector(".card__delete-button");
 
-  cardImageEL.src = cardData.link;
-  cardImageEL.alt = cardData.name;
-  cardTitleEL.textContent = cardData.name;
+//   cardImageEL.src = cardData.link;
+//   cardImageEL.alt = cardData.name;
+//   cardTitleEL.textContent = cardData.name;
 
-  likeButton.addEventListener("click", () => {
-    likeButton.classListtoggle("card__like-button_active");
-  });
+//   likeButton.addEventListener("click", () => {
+//     likeButton.classList.toggle("card__like-button_active");
+//   });
 
-  cardImageEL.addEventListener("click", () => {
-    pictureModalImage.src = cardData.link;
-    pictureModalImage.alt = cardData.name;
-    pictureModalCaption.textContent = cardData.name;
-    openModal(pictureModal);
-  });
+//   cardImageEL.addEventListener("click", () => {
+//     pictureModalImage.src = cardData.link;
+//     pictureModalImage.alt = cardData.name;
+//     pictureModalCaption.textContent = cardData.name;
+//     openModal(pictureModal);
+//   });
 
-  deleteButton.addEventListener("click", () => {
-    cardElement.remove();
-  });
+//   deleteButton.addEventListener("click", () => {
+//     cardElement.remove();
+//   });
 
-  return cardElement;
-}
+//   return cardElement;
+// }
 
 /* ---------------- Event handlers ---------------- */
 function handleAddCardSubmit(e) {
@@ -192,4 +194,8 @@ closeNewCardModal.addEventListener("click", () => {
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 
 /* ---------------- Render initial cards ---------------- */
-initialCards.forEach((cardData) => renderCard(cardData, cardsListEL));
+// initialCards.forEach((cardData) => renderCard(cardData, cardsListEL));
+
+initialCards.forEach((cardData) => {
+  renderCard(cardData, cardsListEL);
+});
